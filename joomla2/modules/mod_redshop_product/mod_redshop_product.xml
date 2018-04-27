@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Mod redSHOP Product</name>
+    <author>redSHOP</author>
+    <version>1.0.0</version>
+    <copyright>Copyright (C) 2005 - 2017 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>Module catagories product</description>
+    <files>
+        <filename>mod_redshop_product.xml</filename>
+        <filename module="mod_redshop_product">mod_redshop_product.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>language</folder>
+        <folder>lib</folder>
+    </files>
+    <media folder="media">
+        <folder>mod_redshop_product</folder>
+    </media>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+          <field
+            name="categories"
+            type="sql"
+            label="MOD_REDSHOP_PRODUCT_CATEGORIES"
+            multiple="true"
+            size="10"
+            query="SELECT id, name FROM #__redshop_category ORDER BY id DESC"
+            key_field="id"
+            value_field="name"
+            >
+            <option value="">JOPTION_ALL_CATEGORIES</option>
+        </field>
+
+        <field
+            name="order_by"
+            type="list"
+            label="MOD_ORDER_BY"
+            description="MOD_SORT_TITLE"
+            default=""
+            >
+            <option value="0">ORDER_BY_ID</option>
+            <option value="1">ORDER_BY_NAME</option>
+        </field>
+        <field
+            name="count"
+            type="number"
+            label="MOD_COUNT"
+            >
+            
+        </field>
+    </fieldset>
+</fields>
+</config>
+</extension>

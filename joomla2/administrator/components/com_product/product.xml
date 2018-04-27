@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>Product</name>
+	<creationDate>January 2018</creationDate>
+	<author>redSHOP</author>
+	<authorEmail>john.doe@example.org</authorEmail>
+	<authorUrl>http://www.example.org</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<version>0.0.1</version>
+	<description>Get product from redSHOP and lazada</description>
+
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>product.php</filename>
+	</files>
+
+	<administration>
+
+		<menu link='index.php?option=com_product'>Product</menu>
+
+		<files folder="admin">
+
+			<filename>index.html</filename>
+			<filename>product.php</filename>
+
+			<folder>sql</folder>
+		</files>
+	</administration>
+
+</extension>
